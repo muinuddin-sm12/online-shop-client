@@ -4,7 +4,7 @@ import { RouterProvider } from "react-router-dom";
 import { router } from "./routes/Router";
 
 createRoot(document.getElementById("root")).render(
-  <div className="max-w-[1536px] mx-auto ">
+  <div className="max-w-[1536px] px-6 md:px-20 mx-auto ">
     <RouterProvider router={router} />
   </div>
 );

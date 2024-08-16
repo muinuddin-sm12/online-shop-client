@@ -1,11 +1,11 @@
 import Banner from "../../components/Banner"
-import Product from "../../components/Product"
+import HomeProduct from "../../components/HomeProduct"
 
 const Home = () => {
   return (
     <div>
         <Banner/>
-        <Product/>
+        <HomeProduct/>
     </div>
   )
 }
