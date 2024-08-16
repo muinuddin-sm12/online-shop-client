@@ -21,7 +21,7 @@ const Filter = ({ onFilter }) => {
                 Brand name
               </label>
               <select
-                className="w-full px-3 py-2 text-gray-800 border border-[#E5007D] focus:outline-[#E5007D] rounded-md"
+                className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
                 name="brand"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
@@ -48,7 +48,7 @@ const Filter = ({ onFilter }) => {
                 Category
               </label>
               <select
-                className="w-full px-3 py-2 text-gray-800 border border-[#E5007D] focus:outline-[#E5007D] rounded-md"
+                className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
                 name="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -66,10 +66,10 @@ const Filter = ({ onFilter }) => {
           </div>
           <div>
             <h2 className="text-gray-600 text-sm pb-1">Price range</h2>
-            <div className="flex items-center">
+            <div className="flex items-center gap-1">
               <div className="w-[70px] text-sm">
                 <input
-                  className="w-full px-3 py-2 text-gray-800 border border-[#E5007D] focus:outline-[#E5007D] rounded-md"
+                  className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
                   name="from"
                   id="from"
                   type="number"
@@ -80,7 +80,7 @@ const Filter = ({ onFilter }) => {
               </div>
               <div className="w-[70px] text-sm">
                 <input
-                  className="w-full px-3 py-2 text-gray-800 border border-[#E5007D] focus:outline-[#E5007D] rounded-md"
+                  className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
                   name="to"
                   id="to"
                   type="number"
@@ -95,7 +95,7 @@ const Filter = ({ onFilter }) => {
             <input
               type="submit"
               value="Filter"
-              className="ml-2 mt-6 px-4 py-2 bg-[#E5007D] rounded-lg text-white font-medium cursor-pointer"
+              className="ml-2 mt-6 px-4 py-2 bg-[#135D66] rounded-lg text-white  cursor-pointer"
             />
           </div>
         </div>

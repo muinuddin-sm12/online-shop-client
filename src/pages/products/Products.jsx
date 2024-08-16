@@ -4,59 +4,61 @@ import Searchbar from "../../components/Searchbar";
 import Sort from "../../components/Sort";
 import axios from "axios";
 import Paginations from "../../components/Paginations";
-
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [filter, setFilter] = useState({});
-  const [sortedProducts, setSortedProducts] = useState([])
+  const [sortedProducts, setSortedProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
+  const [searchText, setSearchText] = useState("");
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://localhost:8000/products', {
+        const response = await axios.get("https://online-shop-server-xi.vercel.app/products", {
           params: {
             page,
             limit: 10,
+            search: searchText,
             ...filter,
-          }
+          },
         });
-        console.log("API resposse ", response.data)
+        // console.log("API resposse ", response.data)
         setProducts(response.data.prodcts);
         setTotalPages(response.data.totalPages || 1);
-        setSortedProducts(response.data.prodcts) ;
+        setSortedProducts(response.data.prodcts);
       } catch (error) {
-        console.error('Error fetching products:', error);
+        console.error("Error fetching products:", error);
       }
     };
     fetchData();
-  }, [filter, page]);
+  }, [filter, page, searchText]);
   useEffect(() => {
     let filteredProducts = [...products];
-
     if (filter.brand) {
-      filteredProducts = filteredProducts.filter(product => product.BrandName === filter.brand);
+      filteredProducts = filteredProducts.filter(
+        (product) => product.BrandName === filter.brand
+      );
     }
-
     if (filter.category) {
-      filteredProducts = filteredProducts.filter(product => product.Category === filter.category);
+      filteredProducts = filteredProducts.filter(
+        (product) => product.Category === filter.category
+      );
     }
-
     if (filter.priceFrom || filter.priceTo) {
-      filteredProducts = filteredProducts.filter(product => {
+      filteredProducts = filteredProducts.filter((product) => {
         const price = product.Price;
-        return (!filter.priceFrom || price >= filter.priceFrom) &&
-               (!filter.priceTo || price <= filter.priceTo);
+        return (
+          (!filter.priceFrom || price >= filter.priceFrom) &&
+          (!filter.priceTo || price <= filter.priceTo)
+        );
       });
     }
-
     setSortedProducts(filteredProducts);
   }, [filter, products]);
-
   const handleFilter = (criteria) => {
     setFilter(criteria);
   };
-
   const handleSort = (sortOption) => {
     let sortedArray = [...products];
     if (sortOption === "lowToHigh") {
@@ -64,20 +66,22 @@ const Products = () => {
     } else if (sortOption === "highToLow") {
       sortedArray.sort((a, b) => b.Price - a.Price);
     } else if (sortOption === "newProduct") {
-      sortedArray.sort(
-        (a, b) => new Date(b.Date) - new Date(a.Date)
-      );
+      sortedArray.sort((a, b) => new Date(b.Date) - new Date(a.Date));
     }
-    setSortedProducts(sortedArray); // Update the sortedProducts state
+    setSortedProducts(sortedArray);
   };
-    console.log(sortedProducts);
+
+  const handleSearch = (searchValue) => {
+    console.log('search value receive:', searchValue)
+    setSearchText(searchValue); 
+  };
+
+//   console.log(sortedProducts);
   return (
     <div>
-      <Searchbar />
-      <div className="flex flex-col md:flex-row bg-gray-200 mb-6 justify-between items-center md:items-end">
-        <Filter
-         onFilter={handleFilter}
-        />
+      <Searchbar onSearch={handleSearch} />
+      <div className="flex flex-col md:flex-row mb-6 justify-between items-center md:items-end">
+        <Filter onFilter={handleFilter} />
         <Sort handleSort={handleSort} />
       </div>
       <div className="flex justify-center items-center ">
@@ -102,7 +106,7 @@ const Products = () => {
                 <h5 className="text-gray-600">Price: {data?.Price}$</h5>
                 <span>{data?.Rating}</span>
                 <div className="flex justify-center py-2">
-                  <button className="px-3 py-1 bg-orange-400 font-medium inline-block">
+                  <button className="px-3 py-1 bg-[#135D66] text-white rounded-md inline-block">
                     Buy now
                   </button>
                 </div>

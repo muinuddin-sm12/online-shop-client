@@ -6,18 +6,19 @@ const HomeProduct = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:8000/products");
-        setProducts(response.data);
+        const response = await axios.get("https://online-shop-server-xi.vercel.app/products");
+        setProducts(response.data.prodcts);
       } catch (error) {
         console.log(error);
       }
     };
     fetchData();
   }, []);
+  console.log(products)
   return (
     <div className="py-20">
      <div className="flex justify-center items-center ">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {products.map((d) => (
             <div
               key={d?._id}

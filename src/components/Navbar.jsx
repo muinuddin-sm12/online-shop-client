@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const Navbar = () => {
   return (
-    <div className="py-10  bg-purple-200">
+    <div className="py-6 border-b">
         <div className="flex justify-between items-center">
             <div>
             <h1 className="text-xl font-medium">logo</h1>
