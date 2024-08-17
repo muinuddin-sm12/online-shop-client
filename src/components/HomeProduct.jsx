@@ -9,12 +9,12 @@ const HomeProduct = () => {
         const response = await axios.get("https://online-shop-server-xi.vercel.app/products");
         setProducts(response.data.prodcts);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     fetchData();
   }, []);
-  console.log(products)
+  // console.log(products)
   return (
     <div className="py-20 px-6 md:px-20">
       <h2 className="text-[#153448] text-3xl text-center py-8 font-medium ">Products</h2>

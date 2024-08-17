@@ -9,7 +9,7 @@ const Searchbar = ({ onSearch }) => {
           className="px-4 py-2 w-[300px] outline-none text-white rounded-xl bg-gray-200"
           type="text"
           onChange={(e) => {
-            console.log(e.target.value)
+            // console.log(e.target.value)
             onSearch(e.target.value)}}
           placeholder="search products"
         />

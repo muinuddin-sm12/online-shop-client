@@ -72,7 +72,7 @@ const Products = () => {
   };
 
   const handleSearch = (searchValue) => {
-    console.log('search value receive:', searchValue)
+    // console.log('search value receive:', searchValue)
     setSearchText(searchValue); 
   };
 

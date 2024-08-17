@@ -22,14 +22,12 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     const image = form.image.value;
-    const userData = { name, email };
 
-    console.log(userData);
+    // console.log(userData);
 
     try {
       setLoading(true);
       //   1. User Registration
-      // eslint-disable-next-line no-unused-vars
       await createUser(email, password);
       //   2. Save username and photo in firebase
       await updateUserProfile(name, image);

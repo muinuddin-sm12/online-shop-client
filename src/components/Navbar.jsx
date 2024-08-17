@@ -11,7 +11,7 @@ const Navbar = () => {
     await logOut()
     toast.success('Logout Successful')
   }
-  console.log(user?.photoURL)
+  // console.log(user?.photoURL)
   return (
     <div className="py-6 px-6 md:px-20 border-b ">
         <div className="flex justify-between items-center">
