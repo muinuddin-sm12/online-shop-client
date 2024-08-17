@@ -1,8 +1,26 @@
-# React + Vite
+# Online Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project involves building a full-stack MERN application featuring product search, filtering, pagination, sorting, and Firebase-based authentication. Users can explore products by category, brand, or price while sorting and filtering with ease.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Responsiveness
+- Good user experience
+- User Register and Login
+- Search functionlity
+- Filterable
+- Sort functionality
+
+## NPM Packages
+
+- [React-hot-toast](https://www.npmjs.com/package/react-hot-toast)
+- [Axios](https://www.npmjs.com/package/axios)
+- [React-icons](https://react-icons.github.io/react-icons/)
+
+## Demo
+
+- Live Preview: https://online-shop-client-sigma.vercel.app/
+
+## Authors
+
+- [@muinuddin-sm12](https://www.github.com/muinuddin-sm12)
