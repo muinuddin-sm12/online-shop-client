@@ -1,7 +1,7 @@
 
 const Banner = () => {
   return (
-    <div>Banner</div>
+    <div className="px-6  md:px-20">Banner</div>
   )
 }
 

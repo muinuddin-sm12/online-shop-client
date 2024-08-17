@@ -78,14 +78,14 @@ const Products = () => {
 
 //   console.log(sortedProducts);
   return (
-    <div>
+    <div className="px-6 md:px-20 min-h-screen">
       <Searchbar onSearch={handleSearch} />
       <div className="flex flex-col md:flex-row mb-6 justify-between items-center md:items-end">
         <Filter onFilter={handleFilter} />
         <Sort handleSort={handleSort} />
       </div>
       <div className="flex justify-center items-center ">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {sortedProducts?.map((data) => (
             <div
               key={data?._id}
@@ -99,14 +99,14 @@ const Products = () => {
                 />
               </div>
               <div>
-                <p className="text-lg font-medium">{data?.Name}</p>
+                <p className="text-lg font-medium text-[#153448]">{data?.Name}</p>
                 {/* <p className="">
             {data?.Description}
           </p> */}
                 <h5 className="text-gray-600">Price: {data?.Price}$</h5>
                 <span>{data?.Rating}</span>
                 <div className="flex justify-center py-2">
-                  <button className="px-3 py-1 bg-[#135D66] text-white rounded-md inline-block">
+                  <button className="px-3 py-1 bg-[#3C5B6F] text-white rounded-md inline-block">
                     Buy now
                   </button>
                 </div>
@@ -115,7 +115,9 @@ const Products = () => {
           ))}
         </div>
       </div>
+      <div className="mb-10">
       <Paginations page={page} totalPages={totalPages} setPage={setPage} />
+      </div>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Sort = ({handleSort}) => {
       <select
         onChange={handleChange}
         value={sort}
-        className="rounded-lg btn bg-[#135D66] px-4 py-2 border-none text-white outline-none"
+        className="rounded-lg btn bg-[#3C5B6F] px-4 py-2 border-none text-white outline-none"
       >
         <option value="">Sort</option>
         <option value="lowToHigh">Low to High</option>

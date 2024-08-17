@@ -16,9 +16,10 @@ const HomeProduct = () => {
   }, []);
   console.log(products)
   return (
-    <div className="py-20">
+    <div className="py-20 px-6 md:px-20">
+      <h2 className="text-[#153448] text-3xl text-center py-8 font-medium ">Products</h2>
      <div className="flex justify-center items-center ">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
           {products.map((d) => (
             <div
               key={d?._id}
@@ -32,14 +33,14 @@ const HomeProduct = () => {
                 />
               </div>
               <div>
-                <p className="text-lg font-medium">{d?.Name}</p>
+                <p className="text-lg font-medium text-[#153448]">{d?.Name}</p>
                 {/* <p className="">
             {data?.Description}
           </p> */}
                 <h5 className="text-gray-600">Price: {d?.Price}$</h5>
                 <span>{d?.Rating}</span>
                 <div className="flex justify-center py-2">
-                  <button className="px-3 py-1 bg-orange-400 font-medium inline-block">
+                  <button className="px-3 py-1 bg-[#3C5B6F] rounded-md text-white font-medium inline-block">
                     Buy now
                   </button>
                 </div>

@@ -21,7 +21,7 @@ const Filter = ({ onFilter }) => {
                 Brand name
               </label>
               <select
-                className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
+                className="w-full px-3 py-2 text-gray-800 border border-[#3C5B6F] focus:outline-[#3C5B6F] rounded-md"
                 name="brand"
                 value={brand}
                 onChange={(e) => setBrand(e.target.value)}
@@ -48,7 +48,7 @@ const Filter = ({ onFilter }) => {
                 Category
               </label>
               <select
-                className="w-full px-3 py-2 text-gray-800 border border-[#135D66] focus:outline-[#135D66] rounded-md"
+                className="w-full px-3 py-2 text-gray-800 border border-[#3C5B6F] focus:outline-[#3C5B6F] rounded-md"
                 name="category"
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
@@ -95,7 +95,7 @@ const Filter = ({ onFilter }) => {
             <input
               type="submit"
               value="Filter"
-              className="ml-2 mt-6 px-4 py-2 bg-[#135D66] rounded-lg text-white  cursor-pointer"
+              className="ml-2 mt-6 px-4 py-2 bg-[#3C5B6F] rounded-lg text-white  cursor-pointer"
             />
           </div>
         </div>
