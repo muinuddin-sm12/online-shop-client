@@ -11,6 +11,10 @@ This project involves building a full-stack MERN application featuring product s
 - Filterable
 - Sort functionality
 
+## Run this project Locally
+
+- add .env.local file and inside this file use your firebase configuration.
+
 ## NPM Packages
 
 - [React-hot-toast](https://www.npmjs.com/package/react-hot-toast)
