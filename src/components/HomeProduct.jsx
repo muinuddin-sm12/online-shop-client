@@ -16,7 +16,7 @@ const HomeProduct = () => {
   }, []);
   // console.log(products)
   return (
-    <div className="py-20 px-6 md:px-20">
+    <div className="pb-20 px-6 md:px-20">
       <h2 className="text-[#153448] text-3xl text-center py-8 font-medium ">Products</h2>
      <div className="flex justify-center items-center ">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">

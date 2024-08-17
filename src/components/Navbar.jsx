@@ -19,10 +19,10 @@ const Navbar = () => {
             <img className="h-14" src={logo} alt="" />
             </Link>
             <div className="flex items-center text-[#153448] gap-6">
-                <Link to={'/'}>Home</Link>
+                <Link className="hidden md:block" to={'/'}>Home</Link>
                 <Link to={'/products'}>Products</Link>
-                <Link to={'/'}>About</Link>
-                <Link to={'/'}>Contact</Link>
+                <Link className="hidden md:block" to={'/'}>About</Link>
+                <Link className="hidden md:block" to={'/'}>Contact</Link>
             </div>
             <div className="flex items-center">
           <div className="w-10 h-10 rounded-full border-[#3C5B6F] border-[2px] overflow-hidden">

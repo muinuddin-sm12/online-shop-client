@@ -14,7 +14,7 @@ const Filter = ({ onFilter }) => {
   
     return (
       <form onSubmit={handleSubmit}>
-        <div className="flex items-center">
+        <div className="flex-col md:flex-row items-center">
           <div className="flex">
             <div className="space-y-1 w-[120px] text-sm mr-1">
               <label htmlFor="brand" className="text-gray-600">
