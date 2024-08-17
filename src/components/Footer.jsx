@@ -1,4 +1,4 @@
-import logo from '../../public/547651b78f7a86921f176525292a948dd513c0fca05e84b684f6dc7b9264ab1c.png'
+import logo from '../../public/logo.png'
 const Footer = () => {
   return (
     <footer className=" divide-y px-6 bg-gray-200 md:px-20 ">

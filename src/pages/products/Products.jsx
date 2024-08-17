@@ -99,7 +99,7 @@ const Products = () => {
                 />
               </div>
               <div>
-                <p className="text-lg font-medium text-[#153448]">{data?.Name}</p>
+                <p className="text-lg font-medium text-[#153448]">{data?.Name.split(' ').slice(0, 2).join(' ')}...</p>
                 {/* <p className="">
             {data?.Description}
           </p> */}
